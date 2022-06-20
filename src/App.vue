@@ -1,52 +1,30 @@
 <template>
-  <div class="background">
-
     <div class="header">
-      <h1>Kosmetiksalon Passion</h1>
-
+      <h1>Kosmetiksalon Passion</h1></div>
       <carousel></carousel>
-
       <navbar></navbar>
-
-      <card> </card>
-
-      <termin></termin>
-      <router-view/>
-    </div>
-  </div>
-  <h1></h1>
-
-  <hr style="height:2px;border-width:0;color:gray;background-color:black;">
-
-  <h1 class="disclaimer"></h1>
-
-  tetetetetetetetetet
+  <router-view/>
 
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Carousel from '@/components/carousel'
 import card from '@/components/card'
-import Termin from '@/views/Termin'
+import carousel from '@/components/carousel'
 
 export default {
   name: 'App',
   components: {
-    Carousel,
+    // eslint-disable-next-line vue/no-unused-components
+    carousel,
+    // eslint-disable-next-line vue/no-unused-components
     Navbar,
     // eslint-disable-next-line vue/no-unused-components
-    card,
-    Termin
+    card
   }
 }
 </script>
 <style>
-
-h1.disclaimer {
-  text-align: center;
-
-}
 
 hr {
   margin-top: 1rem;
@@ -55,7 +33,7 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-div.background {
+div.header {
   background-image: url("https://img.freepik.com/free-vector/cherry-blossom-branch-with-sakura-flower-watercolor-cherry-blossom-vector-pink-sakura-flower-background-sakura-white-background-watercolor-cherry-bud-cherry-blossom-flower-blooming-vector_538213-232.jpg?w=1060");
   background-position: center;
   /*opacity: 0.5;*/
