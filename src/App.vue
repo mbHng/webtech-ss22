@@ -8,13 +8,13 @@
 
       <navbar></navbar>
 
-<!--      <card> </card>-->
+      <card> </card>
 
       <termin></termin>
       <router-view/>
     </div>
   </div>
-    <h1></h1>
+  <h1></h1>
 
   <hr style="height:2px;border-width:0;color:gray;background-color:black;">
 
