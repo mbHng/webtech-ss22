@@ -13,19 +13,25 @@ export default {
   name: 'Prices',
   data () {
     return {
-      guests: [
-        {
-          id: 1,
-          telefonNummer: '1243234788',
-          lastName: 'Max',
-          firstName: 'Mustermann',
-          emailAdresse: 'testguest@htw.de',
-          date: '21.05.2020 13:23'
-        }
-      ]
+      guests: []
     }
+  },
+  methods: {},
+  mounted () {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+    fetch('https://webtech-projekt-backend.herokuapp.com/api/v1/guests', requestOptions)
+      .then(response => response.json())
+      .then(result => result.forEach(guest => {
+        this.guests.push(guest)
+      }))
+      .catch(error => console.log('error', error))
   }
 }
+
 </script>
 
 <style scoped>

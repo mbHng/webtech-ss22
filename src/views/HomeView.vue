@@ -8,7 +8,7 @@
         <h3 class="header">
           Angebote
         </h3>
-          <b class="kopf">Collagenbehandlung:</b>
+          <bt class="kopf">Collagenbehandlung:</bt>
           <p>
           Eine glättende Feuchtigkeitsbehandlung
           mit „Babyskin-Effekt“:
