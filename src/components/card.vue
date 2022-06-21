@@ -5,7 +5,9 @@
         src="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"
         class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Rückenmassage 60 Min.</h5>
+        <div class="col" v-for="guest in guests" :key="guest.id">
+          <h5 class="card-title">{{ guest.firstName }} {{ guest.lastName }}</h5>
+        </div>
         <p class="card-text">60 Verwöhnungsminuten zum Ausschalten vom Alltagsstress.</p>
 
         <form class="text-start needs-validation" id="guests-create-form" novalidate>
@@ -61,12 +63,16 @@ export default {
   name: 'card',
   data () {
     return {
-      firstName: '',
-      lastName: '',
-      emailAdresse: '',
-      telefonNummer: '',
-      date: ''
-
+      guests: [
+        {
+          id: 1,
+          telefonNummer: '1243234788',
+          lastName: 'Max',
+          firstName: 'Mustermann',
+          emailAdresse: 'testguest@htw.de',
+          date: '21.05.2020 13:23'
+        }
+      ]
     }
   },
   emits: ['created'],
