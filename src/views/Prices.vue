@@ -18,7 +18,7 @@ export default {
   },
   methods: {},
   mounted () {
-    const endUrl = 'https://webtech-projekt-backend.herokuapp.com' + '/api/v1/guests'
+    const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
