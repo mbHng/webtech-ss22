@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
   <div class="container" style="padding-top: 100px">
     <div class="row row-cols-3">
       <div class="col">
@@ -48,6 +48,7 @@
 import Navbar from '@/components/Navbar.vue'
 import card from '@/components/card'
 import carousel from '@/components/carousel'
+import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'App',
@@ -57,7 +58,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Navbar,
     // eslint-disable-next-line vue/no-unused-components
-    card
+    card,
+    // eslint-disable-next-line vue/no-unused-components
+    HelloWorld
   }
 }
 </script>
