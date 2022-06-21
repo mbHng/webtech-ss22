@@ -1,16 +1,16 @@
 <template>
     <div class="header">
-      <h1>Kosmetiksalon Passion</h1></div>
+      <h1 class="globalHeader">Kosmetiksalon Passion</h1></div>
       <carousel></carousel>
       <navbar></navbar>
   <router-view/>
-
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import card from '@/components/card'
 import carousel from '@/components/carousel'
+import Prices from '@/views/Prices'
 
 export default {
   name: 'App',
@@ -20,7 +20,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Navbar,
     // eslint-disable-next-line vue/no-unused-components
-    card
+    card,
+    // eslint-disable-next-line vue/no-unused-components
+    Prices
   }
 }
 </script>
@@ -40,22 +42,12 @@ div.header {
   /*https://wallpapercave.com/wp/wp7160349.png*/
 }
 
-h1 {
+h1{
   font-family: "Brush Script MT";
   padding: 60px;
   text-align: center;
   color: black;
   font-size: 50px;
-
-}
-
-pre {
-  font-family: "Brush Script MT", cursive;
-  font-size: 13px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 18.5714px;
 }
 
 #app {

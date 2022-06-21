@@ -18,12 +18,12 @@ export default {
   },
   methods: {},
   mounted () {
+    const endUrl = 'https://webtech-projekt-backend.herokuapp.com' + '/api/v1/guests'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
-
-    fetch('https://webtech-projekt-backend.herokuapp.com/api/v1/guests', requestOptions)
+    fetch(endUrl, requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(guest => {
         this.guests.push(guest)
@@ -35,5 +35,13 @@ export default {
 </script>
 
 <style scoped>
+
+h1 {
+  font-family: "Avenir Next";
+  padding: 60px;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+}
 
 </style>
